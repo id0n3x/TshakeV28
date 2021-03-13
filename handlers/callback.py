@@ -261,7 +261,7 @@ def updateCallback(client, callback_query,redis):
       edits = (redis.hget("{}Nbot:{}:edits".format(BOT_ID,chatID),userID) or 0)
       rate = int(msgs)*100/20000
       age = getAge(userID,r)
-      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(Name(userFN),url="t.me/zx_xx")],[InlineKeyboardButton(r.Rrank.format(t),url="t.me/zx_xx")],[InlineKeyboardButton(r.Rmsgs.format(msgs),url="t.me/zx_xx")],[InlineKeyboardButton(r.Rrate.format(str(rate)+"%"),url="t.me/zx_xx")],[InlineKeyboardButton(r.Redits.format(edits),url="t.me/zx_xx")],[InlineKeyboardButton(r.Rage.format(age),url="t.me/zx_xx")]])
+      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(Name(userFN),url="t.me/calmapubg")],[InlineKeyboardButton(r.Rrank.format(t),url="t.me/calmapubg")],[InlineKeyboardButton(r.Rmsgs.format(msgs),url="t.me/calmapubg")],[InlineKeyboardButton(r.Rrate.format(str(rate)+"%"),url="t.me/calmapubg")],[InlineKeyboardButton(r.Redits.format(edits),url="t.me/calmapubg")],[InlineKeyboardButton(r.Rage.format(age),url="t.me/calmapubg")]])
       Bot("editMessageReplyMarkup",{"chat_id":chatID,"message_id":message_id,"disable_web_page_preview":True,"reply_markup":reply_markup})
     if re.search("ShowO",date[0]):
       T = date[0].replace("ShowO","")
@@ -428,11 +428,11 @@ def updateCallback(client, callback_query,redis):
           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(r.clickTOpv,url="https://telegram.me/{}?start=showreplylist={}={}={}".format(Botuser,chatID,userID,"STreplys")),],[InlineKeyboardButton("<<",callback_data=json.dumps(["replylist","",userID])),]])
           Bot("editMessageText",{"chat_id":chatID,"text":r.Toolong,"message_id":message_id,"disable_web_page_preview":True,"reply_markup":reply_markup})
         else:
-          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📂꒐ قائمة الصوتيات فارغة",callback_data=json.dumps(["delSTreplys","kb",userID])),],[InlineKeyboardButton("<<",callback_data=json.dumps(["replylist","",userID])),]])
+          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ðŸ“‚ê’ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØµÙˆØªÙŠØ§Øª ÙØ§Ø±ØºØ©",callback_data=json.dumps(["delSTreplys","kb",userID])),],[InlineKeyboardButton("<<",callback_data=json.dumps(["replylist","",userID])),]])
           Bot("editMessageText",{"chat_id":chatID,"text":words,"message_id":message_id,"disable_web_page_preview":True,"reply_markup":reply_markup})
       else:
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("<<",callback_data=json.dumps(["replylist","",userID])),]])
-        Bot("editMessageText",{"chat_id":chatID,"text":"📂꒐ قائمة الصوتيات فارغة","message_id":message_id,"disable_web_page_preview":True,"reply_markup":reply_markup})
+        Bot("editMessageText",{"chat_id":chatID,"text":"ðŸ“‚ê’ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØµÙˆØªÙŠØ§Øª ÙØ§Ø±ØºØ©","message_id":message_id,"disable_web_page_preview":True,"reply_markup":reply_markup})
 
 
     if date[0] == "showSTreplylist":
